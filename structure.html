@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+       
+        
+        ul>li{
+            list-style: none;
+            
+        }
+        ul{
+            display: flex;
+            gap: 50px;
+        }
+        .main-container{
+           /*  display: grid; */
+            grid-template-areas: 
+            "header header header header"
+            "nav    nav   nav     nav"
+            "main   main  main    first-side"
+            "footer footer footer footer"
+            ;
+        }
+        .nav,.header,.main,.first-side,.footer {
+            border: 2px solid black;
+        }
+        .nav{
+            grid-area: nav;
+        }
+        .header{
+            grid-area: header;
+        }
+        .main{
+            grid-area: main;
+        }
+        .first-side{
+            grid-area: first-side;
+        }
+        
+        .footer{
+            grid-area: footer;
+        }
+        @media screen and (max-width:576px) {
+            .container{
+                display: grid;
+                grid-template-areas: 
+                "header"
+                "nav"
+                "main"
+                "first-side"
+                "footer"
+                ;
+            }
+            
+        }
+        
+    </style>
+</head>
+<body>
+    <section class="main-container">
+        <header class="header">
+            <h1>This is heading</h1>
+         </header>
+         <nav class="nav">
+             <ul>
+                 <li>Home</li>
+                 <li>About</li>
+                 <li>Contact</li>
+                 <li>Service</li>
+                 <li>Settings</li>
+             </ul>
+         </nav>
+         <main class="main">
+             <article>
+                 <h1>This is first title</h1>
+                 <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime sequi, accusantium eos id totam voluptatem maiores soluta nesciunt laudantium incidunt mollitia aliquid, dolore tempore asperiores vero nisi in ea. Tenetur magni expedita laudantium, ducimus doloribus commodi deserunt similique alias animi, nostrum cum maxime, veritatis quibusdam! Placeat vel minima animi dolorem recusandae itaque impedit sint ad perspiciatis facilis culpa porro, consectetur doloremque ut dolor repellendus fuga aperiam consequatur, fugiat deserunt sequi. Et, iusto soluta optio totam culpa molestiae suscipit perferendis omnis voluptatem odit laborum nulla eius inventore ratione facilis provident quam deserunt necessitatibus neque quo, laboriosam enim accusamus nihil nisi? Voluptas!</p>
+             </article>
+             <article>
+                 <h1>This is first title</h1>
+                 <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime sequi, accusantium eos id totam voluptatem maiores soluta nesciunt laudantium incidunt mollitia aliquid, dolore tempore asperiores vero nisi in ea. Tenetur magni expedita laudantium, ducimus doloribus commodi deserunt similique alias animi, nostrum cum maxime, veritatis quibusdam! Placeat vel minima animi dolorem recusandae itaque impedit sint ad perspiciatis facilis culpa porro, consectetur doloremque ut dolor repellendus fuga aperiam consequatur, fugiat deserunt sequi. Et, iusto soluta optio totam culpa molestiae suscipit perferendis omnis voluptatem odit laborum nulla eius inventore ratione facilis provident quam deserunt necessitatibus neque quo, laboriosam enim accusamus nihil nisi? Voluptas!</p>
+             </article>
+         </main>
+         <aside>
+             <div class="first-side">
+                 <h1>First Side Bar</h1>
+             </div>
+            
+         </aside>
+         <footer class="footer">
+             <h1>This is footer</h1>
+         </footer>
+    </section>
+</body>
+</html>
